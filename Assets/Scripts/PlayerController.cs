@@ -13,6 +13,14 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
 
+    //[SerializeField]
+    public Camera mainCamera;
+    //[SerializeField]
+    public Camera hoodCamera;
+    //[SerializeField]
+    public KeyCode switchCameraKey;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +38,12 @@ public class PlayerController : MonoBehaviour
 
         //Aracý belli bir hýzda saða ve sola gidecek þekilde ayarlama
         transform.Rotate(Vector3.up * Time.deltaTime * carTurnSpeed * horizontalInput);
+
+        //Kamerayý yapýlan tuþ atamasýyla deðiþtir
+        if(Input.GetKeyDown(switchCameraKey))
+        {
+            mainCamera.enabled = !mainCamera.enabled;
+            hoodCamera.enabled = !hoodCamera.enabled;
+        }
     }
 }
