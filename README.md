@@ -8,7 +8,7 @@
 
 Medium: [I added a few more cars that automatically drive down the road in the opposite direction, which the player must also avoid.](https://drive.google.com/file/d/1Fzr82Mj9HaGIh7pZGA-MW_zF_7V4SmOI/view?usp=sharing)
 
-Hard:
+Hard:[I allowed the player to press a key on the keyboard to change camera views](https://drive.google.com/file/d/1UMU0Ij2Qz6P7GrhxQWthOUiUTfTEKSRn/view?usp=sharing)
 
 Expert:
 
