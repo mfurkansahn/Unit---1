@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    string inputId; //Çoklu oyuncunun girdileri için id ekle
+
+    [SerializeField]
     private float carSpeed = 20.0f;
 
     [SerializeField]
@@ -20,7 +23,6 @@ public class PlayerController : MonoBehaviour
     //[SerializeField]
     public KeyCode switchCameraKey;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +32,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal" + inputId);
+        verticalInput = Input.GetAxis("Vertical" + inputId);
 
         //Aracý belli bir hýzda ileri ve geri gidecek þekilde ayarlama
         transform.Translate(Vector3.forward * Time.deltaTime * carSpeed * verticalInput);
